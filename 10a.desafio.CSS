@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d0e15;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Header com glassmorphism */
+.cabecalho {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  background: linear-gradient(90deg, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* Layout principal com Grid */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* Artigo em destaque */
+.artigo-destaque {
+  background: linear-gradient(135deg, #1e1b4b, #311b92);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s;
+}
+
+.artigo-destaque:hover {
+  transform: translateY(-2px);
+}
+
+.artigo-destaque h2 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.data {
+  color: #a78bfa;
+  font-size: 14px;
+}
+
+.leia-mais {
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.leia-mais summary {
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+/* Seção de vídeo */
+.secao-video {
+  text-align: center;
+}
+
+.video-embed {
+  border-radius: 8px;
+  border: 1px solid #334155;
+  margin-top: 12px;
+}
+
+/* Newsletter com gradiente */
+.secao-newsletter {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.form-newsletter input,
+.form-newsletter select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.checkbox-container {
+  margin: 12px 0;
+}
+
+.btn-inscrever {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-inscrever:hover {
+  transform: scale(1.02);
+}
+
+/* Rodapé minimalista */
+.rodape {
+  text-align: center;
+  padding: 24px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #64748b;
+}
+
+.rodape a {
+  color: #60a5fa;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .conteudo {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .artigo-destaque {
+    grid-column: span 2;
+  }
+}
